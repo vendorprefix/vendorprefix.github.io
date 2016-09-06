@@ -243,7 +243,7 @@ a {
 .c-hint {
   position: absolute;
   width: 8%;
-  top: 50%;
+  top: 35%;
   right: 0;
   transform: translateX(-10vw);
   opacity: 0;
