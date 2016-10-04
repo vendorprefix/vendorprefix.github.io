@@ -1,483 +1,470 @@
-@import "https://fonts.googleapis.com/css?family=Open+Sans:400,700,800";
-/* line 2, _reset.scss */
-* {
-  box-sizing: border-box; }
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+/* line 8, _normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
 
-/* line 5, _reset.scss */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  -webkit-margin-after: 0em;
-  -webkit-margin-before: 0em;
-  -webkit-margin-end: 0px;
-  -webkit-margin-start: 0px;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline; }
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 18, _normalize.scss */
+body {
+  margin: 0; }
 
-/* line 19, _reset.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+/* line 31, _normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
   display: block; }
 
-/* line 22, _reset.scss */
-body {
-  line-height: 1; }
-
-/* line 25, _reset.scss */
-ol, ul {
-  list-style: none; }
-
-/* line 28, _reset.scss */
-blockquote, q {
-  quotes: none; }
-
-/* line 32, _reset.scss */
-blockquote:before, blockquote:after {
-  content: "";
-  content: none; }
-
-/* line 38, _reset.scss */
-q:before, q:after {
-  content: "";
-  content: none; }
-
-/* line 43, _reset.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/* line 29, _vars.scss */
-body {
-  content: 990px; }
-
-/* line 1, _global.scss */
-html {
-  font-size: 62.5%; }
-
-/* line 5, _global.scss */
-img {
-  width: 100%;
-  transition: transform 0.2s; }
-
-/* line 10, _global.scss */
-h2 {
-  font-size: 3.4rem;
-  font-weight: 900;
-  line-height: 4.5rem; }
-
-/* line 16, _global.scss */
-h3 {
-  font-size: 1.8rem;
-  font-weight: 900;
-  line-height: 3.5rem;
-  border-bottom: 3px solid #444444;
-  margin-bottom: 2rem; }
-
-/* line 24, _global.scss */
-p {
-  font-size: 1.8rem;
-  line-height: 2.5rem; }
-
-/* line 29, _global.scss */
-a {
-  color: #444444;
-  text-decoration: none;
-  transition: color 0.2s; }
-  /* line 33, _global.scss */
-  a:hover {
-    color: #949494; }
-
-/* line 38, _global.scss */
-strong {
-  font-weight: 900; }
-
-/* line 1, components/_c-body.scss */
-.c-body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
-  font-size: 1.8rem;
-  background-color: #fffffa; }
-  /* line 8, components/_c-body.scss */
-  .c-body--wrapper {
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    justify-content: center; }
-  /* line 15, components/_c-body.scss */
-  .c-body--container {
-    width: 990px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 8rem; }
-    @media screen and (min-width: 990px) {
-      /* line 15, components/_c-body.scss */
-      .c-body--container {
-        margin-top: 20rem; } }
-
-/* line 1, components/_c-nav.scss */
-.c-nav {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  background: #fffffa;
-  width: 100vw;
-  z-index: 99999999; }
-  /* line 10, components/_c-nav.scss */
-  .c-nav--contents {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    height: 5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    transition: height 0.2s; }
-    /* line 22, components/_c-nav.scss */
-    .c-nav--contents img {
-      transform: scale(0.5); }
-      @media screen and (min-width: 990px) {
-        /* line 22, components/_c-nav.scss */
-        .c-nav--contents img {
-          transform: scale(1); } }
-    @media screen and (min-width: 990px) {
-      /* line 30, components/_c-nav.scss */
-      .c-nav--contents.active {
-        height: 8rem; }
-        /* line 35, components/_c-nav.scss */
-        .c-nav--contents.active img {
-          transform: scale(0.8); } }
-    @media screen and (min-width: 990px) {
-      /* line 10, components/_c-nav.scss */
-      .c-nav--contents {
-        width: 990px;
-        height: 15rem;
-        padding-left: 1rem;
-        padding-right: 1rem; } }
-  /* line 50, components/_c-nav.scss */
-  .c-nav--name {
-    margin-right: auto; }
-
-/* line 1, components/_c-project.scss */
-.c-project {
-  margin-bottom: 2rem; }
-  @media screen and (min-width: 990px) {
-    /* line 1, components/_c-project.scss */
-    .c-project {
-      margin-bottom: 0rem; } }
-
-/* line 1, components/_c-about.scss */
-.c-about,
-.c-contact {
-  margin-top: 0rem;
-  margin-bottom: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding-bottom: 4rem; }
-  @media screen and (min-width: 990px) {
-    /* line 1, components/_c-about.scss */
-    .c-about,
-    .c-contact {
-      margin-left: 12rem;
-      margin-right: 12rem;
-      padding-left: 0rem;
-      padding-right: 0rem; } }
-  /* line 18, components/_c-about.scss */
-  .c-about h2,
-  .c-contact h2 {
-    margin-bottom: 2rem; }
-  /* line 22, components/_c-about.scss */
-  .c-about p,
-  .c-contact p {
-    margin-bottom: 2rem; }
-
-/* line 27, components/_c-about.scss */
-.c-about {
-  border-bottom: 1px solid #444444; }
-
-/* line 31, components/_c-about.scss */
-.c-contact {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem; }
-  @media screen and (min-width: 990px) {
-    /* line 31, components/_c-about.scss */
-    .c-contact {
-      flex-direction: row;
-      margin-top: 5rem; } }
-  /* line 41, components/_c-about.scss */
-  .c-contact--image {
-    margin-bottom: 2rem; }
-    @media screen and (min-width: 990px) {
-      /* line 41, components/_c-about.scss */
-      .c-contact--image {
-        margin-right: 5rem; } }
-  @media screen and (min-width: 990px) {
-    /* line 48, components/_c-about.scss */
-    .c-contact--info {
-      margin-right: 5rem; } }
-  /* line 53, components/_c-about.scss */
-  .c-contact--info-container {
-    margin-bottom: 2rem; }
-  /* line 57, components/_c-about.scss */
-  .c-contact--info p {
-    font-size: 1.4rem;
-    margin-bottom: 0rem; }
-
-/* line 1, components/_c-footer.scss */
-.c-footer {
-  display: flex;
-  align-items: center;
-  height: 5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  transition: height 0.2s;
-  border-top: 1px solid #444444; }
-  @media screen and (min-width: 990px) {
-    /* line 1, components/_c-footer.scss */
-    .c-footer {
-      height: 6rem;
-      margin-left: 1rem;
-      margin-right: 1rem; } }
-  /* line 19, components/_c-footer.scss */
-  .c-footer p {
-    font-size: 1.2rem; }
-
-/* line 1, components/_c-hint.scss */
-.c-hint {
-  position: absolute;
-  width: 8%;
-  top: 27vh;
-  right: 0;
-  transform: translateX(-10vw);
-  opacity: 0;
-  z-index: -999;
-  animation-name: hint;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-iteration-count: 1; }
-  @media screen and (min-width: 990px) {
-    /* line 1, components/_c-hint.scss */
-    .c-hint {
-      animation-name: none; } }
-
-@keyframes hint {
-  0% {
-    transform: translateX(-10vw);
-    opacity: 0;
-    z-index: 999; }
-  15% {
-    transform: translateX(-10vw);
-    opacity: 0.5;
-    z-index: 999; }
-  85% {
-    transform: translateX(-80vw);
-    opacity: 0.5;
-    z-index: 999; }
-  100% {
-    transform: translateX(-80vw);
-    opacity: 0;
-    z-index: 999; } }
 /**
- *   Here's where everything gets included. You don't need
- *   to change anything here, and doing so might break
- *   stuff. Here be dragons and all that.
+ * Add the correct display in IE 9-.
  */
+/* line 50, _normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
 /**
- *   Default variables
- *
- *   While these can be set with JavaScript, it's probably
- *   better and faster to just set them here, compile to
- *   CSS and include that instead to use some of that
- *   hardware-accelerated goodness.
+ * Add the correct display in iOS 4-7.
  */
-/* line 14, components/_c-slider.scss */
-.unslider {
-  position: relative;
-  margin: 0;
-  padding: 0; }
-  @media screen and (min-width: 990px) {
-    /* line 14, components/_c-slider.scss */
-    .unslider {
-      position: static; } }
+/* line 61, _normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
 
-/* line 22, components/_c-slider.scss */
-.unslider-wrap {
-  position: relative; }
-  @media screen and (min-width: 990px) {
-    /* line 25, components/_c-slider.scss */
-    .unslider-wrap li {
-      padding: 0 1rem !important; } }
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 70, _normalize.scss */
+progress {
+  vertical-align: baseline; }
 
-/* line 31, components/_c-slider.scss */
-.unslider-wrap.unslider-carousel > li {
-  float: left; }
-
-/* line 34, components/_c-slider.scss */
-.unslider-vertical > ul {
-  height: 100%; }
-
-/* line 37, components/_c-slider.scss */
-.unslider-vertical li {
-  float: none;
-  width: 100%; }
-
-/* line 41, components/_c-slider.scss */
-.unslider-fade {
-  position: relative; }
-
-/* line 44, components/_c-slider.scss */
-.unslider-fade .unslider-wrap li {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  z-index: 8; }
-
-/* line 51, components/_c-slider.scss */
-.unslider-fade .unslider-wrap li.unslider-active {
-  z-index: 10; }
-
-/* line 54, components/_c-slider.scss */
-.unslider ul, .unslider ol, .unslider li {
-  list-style: none;
-  /* Reset any weird spacing */
-  margin: 0;
-  padding: 0;
-  border: none; }
-
-/* line 61, components/_c-slider.scss */
-.unslider-arrow {
-  position: absolute;
-  left: 0px;
-  z-index: 2;
-  cursor: pointer;
-  height: 100%;
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center; }
-  @media screen and (min-width: 990px) {
-    /* line 61, components/_c-slider.scss */
-    .unslider-arrow {
-      height: 74.5%; } }
-  @media (max-width: 990px) {
-    /* line 61, components/_c-slider.scss */
-    .unslider-arrow {
-      top: 0px; } }
-
-/* line 78, components/_c-slider.scss */
-.unslider-arrow.next {
-  justify-content: flex-end;
-  left: auto;
-  right: 0px; }
-
-/* line 84, components/_c-slider.scss */
-.unslider-nav ol {
-  list-style: none;
-  text-align: center; }
-
-/* line 88, components/_c-slider.scss */
-.unslider-nav ol li {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin: 0 4px;
-  background: transparent;
-  border-radius: 5px;
-  overflow: hidden;
-  text-indent: -999em;
-  border: 2px solid #fff;
-  cursor: pointer; }
-
-/* line 100, components/_c-slider.scss */
-.unslider-nav ol li.unslider-active {
-  background: #fff;
-  cursor: default; }
-
-/* line 105, components/_c-slider.scss */
-.arrow-next,
-.arrow-back {
-  height: 30px;
-  width: 40px;
-  background-image: url("../images/next.svg");
-  background-repeat: no-repeat;
-  background-size: contain; }
-
-/* line 114, components/_c-slider.scss */
-.arrow-back {
-  background-image: url("../images/prev.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right; }
-
-/* line 122, components/_c-slider.scss */
-.c-slider--text {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem; }
-  @media (min-width: 990px) {
-    /* line 122, components/_c-slider.scss */
-    .c-slider--text {
-      position: absolute;
-      padding: 1rem 2rem;
-      background: rgba(255, 255, 250, 0.85);
-      top: 0;
-      right: 0;
-      left: 0;
-      height: 0;
-      padding-bottom: 59.5%;
-      opacity: 0;
-      transition: opacity 0.2s; } }
-  @media (min-width: 990px) {
-    /* line 138, components/_c-slider.scss */
-    .c-slider--text-container {
-      position: absolute;
-      right: 3rem;
-      top: 50%;
-      transform: translateY(-50%); } }
-/* line 148, components/_c-slider.scss */
-.c-slider--info {
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+/* line 79, _normalize.scss */
+template,
+[hidden] {
   display: none; }
-  @media (min-width: 990px) {
-    /* line 148, components/_c-slider.scss */
-    .c-slider--info {
-      display: block;
-      position: absolute;
-      right: 2.75rem;
-      top: 56rem;
-      width: .75%;
-      z-index: 999; } }
-@media (min-width: 990px) {
-  /* line 160, components/_c-slider.scss */
-  .c-slider--info:hover + .c-slider--text {
-    opacity: 1;
-    z-index: 9999; } }
-@media (min-width: 990px) {
-  /* line 167, components/_c-slider.scss */
-  .c-slider--text:hover {
-    opacity: 1;
-    z-index: 9999; } }
 
-@media (max-width: 990px) {
-  /* line 176, components/_c-slider.scss */
-  .gallery {
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    font-size: 0;
-    -webkit-scroll-snap-type: mandatory;
-    -webkit-scroll-snap-points-x: repeat(100%);
-    -webkit-scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    -ms-scroll-snap-type: mandatory;
-    -ms-scroll-snap-points-x: repeat(100%);
-    -ms-scroll-behavior: smooth;
-    -ms-overflow-scrolling: touch;
-    scroll-snap-type: mandatory;
-    scroll-snap-points-x: repeat(100%);
-    scroll-behavior: smooth;
-    overflow-scrolling: touch; }
-    /* line 193, components/_c-slider.scss */
-    .gallery li {
-      display: inline; } }
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 92, _normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 102, _normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 115, _normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 125, _normalize.scss */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 134, _normalize.scss */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 143, _normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 152, _normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 161, _normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 170, _normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 179, _normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 187, _normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 191, _normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 202, _normalize.scss */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 210, _normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 222, _normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 234, _normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 243, _normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 257, _normalize.scss */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+/* line 269, _normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 278, _normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 288, _normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 299, _normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 310, _normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 322, _normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 333, _normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 346, _normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, _normalize.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, _normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, _normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, _normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+/* line 397, _normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+/* line 406, _normalize.scss */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 416, _normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* line 4, site.css.scss */
+body {
+  background: #c6c6c6; }
+
+/* line 8, site.css.scss */
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  /* line 17, site.css.scss */
+  .logo img {
+    height: 6em; }
+
+/* line 22, site.css.scss */
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  background: url("/images/bg.gif");
+  background-size: cover;
+  background-position: center; }
+
+/* line 35, site.css.scss */
+.pop {
+  -webkit-animation-name: pop;
+          animation-name: pop;
+  -webkit-animation-duration: .9s;
+          animation-duration: .9s;
+  -webkit-transform-origin: center;
+          transform-origin: center; }
+
+@-webkit-keyframes pop {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; }
+  82.5% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1; }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
