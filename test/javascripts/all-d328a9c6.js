@@ -24,7 +24,7 @@ $( function() {
       }
     }
     if(within !== wasWithin) {
-      $menuItems.removeClass('active').eq(within).addClass('active');
+      $menuItems.removeClass('nav--active').eq(within).addClass('nav--active');
       wasWithin = within;
     }
   }
@@ -60,7 +60,8 @@ $( function() {
       $('.active').removeClass('active');
       var target = $(e.target);
       target.addClass('active');
-      $('.images').addClass('active');
+      target.parent().addClass('images--active');
+      centerCurrentImage(target);
       expandList(target);
     });
 
@@ -72,14 +73,20 @@ $( function() {
       var active = $('.active');
       if (e.keyCode === 27) {
         active.removeClass('active');
-        $('.images').removeClass('active');
-      } else if (e.keyCode === 37 && active.prev().length > 0) {
+        $('.images--active').removeClass('images--active');
+      } else if (
+        (e.keyCode === 37 && active.prev().length > 0) ||
+        (e.keyCode === 39 && active.next().length > 0)
+      ) {
+        var target = e.keyCode === 37 ? active.prev() : active.next();
         active.removeClass('active');
-        active.prev().addClass('active');
-      } else if (e.keyCode === 39 && active.next().length > 0) {
-        active.removeClass('active');
-        active.next().addClass('active');
-        expandList(active.next());
+        target.addClass('active');
+        centerCurrentImage(target);
+
+        // If we're moving forward, expand the list to mock infinite scrolling
+        if (e.keyCode === 39) {
+          expandList(target);
+        }
       }
     });
   }
@@ -94,6 +101,15 @@ $( function() {
       var previous = siblings.clone(true);
       previous.insertAfter(siblings.last());
     }
+  }
+
+  // After expansion delay, center image in viewport
+  function centerCurrentImage(target) {
+    setTimeout(function() {
+      var offset = (window.innerWidth - target.width()) / 2;
+      var reset = target.parent().parent().scrollLeft() + target.position().left - offset;
+      target.parent().parent().animate({ scrollLeft: reset });
+    }, 310);
   }
 
   setImageLogic();

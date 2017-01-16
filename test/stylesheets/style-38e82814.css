@@ -93,12 +93,12 @@ html {
       cursor: pointer;
       margin-left: .25rem;
       transition: color 0.2s; }
-      .c-top_menu--contents nav a.active {
-        color: #9B59B6; }
-        .c-top_menu--contents nav a.active:hover {
-          color: #9B59B6; }
+      .c-top_menu--contents nav a.nav--active {
+        color: #69CDED; }
+        .c-top_menu--contents nav a.nav--active:hover {
+          color: #69CDED; }
       .c-top_menu--contents nav a:hover {
-        color: #BE90D4; }
+        color: #E381EB; }
   .c-top_menu--name {
     margin-right: auto; }
     .c-top_menu--name strong {
@@ -127,7 +127,7 @@ html {
       .c-section--about .images, .c-section--hymnal .images, .c-section--insights .images, .c-section--voxdotcom .images, .c-section--concert .images {
         height: 40vh;
         padding-left: calc((100% - 930px)/2); }
-        .c-section--about .images.active, .c-section--hymnal .images.active, .c-section--insights .images.active, .c-section--voxdotcom .images.active, .c-section--concert .images.active {
+        .c-section--about .images.images--active, .c-section--hymnal .images.images--active, .c-section--insights .images.images--active, .c-section--voxdotcom .images.images--active, .c-section--concert .images.images--active {
           height: 60vh; } }
     .c-section--about .images:hover, .c-section--hymnal .images:hover, .c-section--insights .images:hover, .c-section--voxdotcom .images:hover, .c-section--concert .images:hover {
       cursor: pointer; }
@@ -179,10 +179,10 @@ html {
       .c-section--about p, .c-section--hymnal p, .c-section--insights p, .c-section--voxdotcom p, .c-section--concert p {
         max-width: 50rem; } }
   .c-section--about a, .c-section--hymnal a, .c-section--insights a, .c-section--voxdotcom a, .c-section--concert a {
-    color: #9B59B6;
+    color: #69CDED;
     transition: color 0.2s; }
     .c-section--about a:hover, .c-section--hymnal a:hover, .c-section--insights a:hover, .c-section--voxdotcom a:hover, .c-section--concert a:hover {
-      color: #BE90D4; }
+      color: #E381EB; }
 
 .shape1-transform {
   transform: translate(0px, -140px); }
