@@ -52,4 +52,49 @@ $( function() {
 
   followMenu();
 
+  // Images
+
+  function setImageLogic() {
+    $('img').on('click', function(e) {
+      // Update active class on image click
+      $('.active').removeClass('active');
+      var target = $(e.target);
+      target.addClass('active');
+      $('.images').addClass('active');
+      expandList(target);
+    });
+
+    // Keyboard shortucts:
+    // A) ESC: Close all active
+    // B) Forward Arrow: Move to next
+    // C) Back Arrow: Move to previous
+    window.addEventListener('keydown', function(e) {
+      var active = $('.active');
+      if (e.keyCode === 27) {
+        active.removeClass('active');
+        $('.images').removeClass('active');
+      } else if (e.keyCode === 37 && active.prev().length > 0) {
+        active.removeClass('active');
+        active.prev().addClass('active');
+      } else if (e.keyCode === 39 && active.next().length > 0) {
+        active.removeClass('active');
+        active.next().addClass('active');
+        expandList(active.next());
+      }
+    });
+  }
+
+  // If nearing the end of the current image list, clone and expand to create
+  // an infinite effect.
+  //
+  // TODO: Make this more performant if need be
+  function expandList(target) {
+    if (target.nextAll().length <= 2) {
+      var siblings = target.siblings();
+      var previous = siblings.clone(true);
+      previous.insertAfter(siblings.last());
+    }
+  }
+
+  setImageLogic();
 });
