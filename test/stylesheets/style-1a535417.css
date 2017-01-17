@@ -109,11 +109,11 @@ html {
   padding-bottom: 5rem; }
   .c-section--about .image-container, .c-section--hymnal .image-container, .c-section--insights .image-container, .c-section--voxdotcom .image-container, .c-section--concert .image-container {
     overflow-x: scroll;
-    padding-right: 1.5rem;
-    padding-top: 1.5rem;
+    padding: 1.5rem;
     background: #4f4f4f; }
     .c-section--about .image-container::-webkit-scrollbar, .c-section--hymnal .image-container::-webkit-scrollbar, .c-section--insights .image-container::-webkit-scrollbar, .c-section--voxdotcom .image-container::-webkit-scrollbar, .c-section--concert .image-container::-webkit-scrollbar {
       width: 0px;
+      height: 0px;
       background: transparent; }
   .c-section--about .images, .c-section--hymnal .images, .c-section--insights .images, .c-section--voxdotcom .images, .c-section--concert .images {
     padding-left: 1.5rem;
