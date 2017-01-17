@@ -161,14 +161,18 @@ html {
         margin-bottom: 3rem;
         line-height: 10rem; } }
   .c-section--about .tags, .c-section--hymnal .tags, .c-section--insights .tags, .c-section--voxdotcom .tags, .c-section--concert .tags {
-    margin-bottom: 1.8rem;
-    transform: skew(-10deg); }
+    margin-bottom: 1.8rem; }
     .c-section--about .tags li, .c-section--hymnal .tags li, .c-section--insights .tags li, .c-section--voxdotcom .tags li, .c-section--concert .tags li {
       display: inline-block;
       background: #949494;
       color: #ffffff;
       font-size: 1.2rem;
-      padding: .75rem 1rem; }
+      padding: .75rem 1rem;
+      transform: skew(-10deg); }
+      .c-section--about .tags li p, .c-section--hymnal .tags li p, .c-section--insights .tags li p, .c-section--voxdotcom .tags li p, .c-section--concert .tags li p {
+        transform: skew(10deg);
+        margin-bottom: 0;
+        line-height: 1.75rem; }
       @media screen and (min-width: 996px) {
         .c-section--about .tags li, .c-section--hymnal .tags li, .c-section--insights .tags li, .c-section--voxdotcom .tags li, .c-section--concert .tags li {
           font-size: 1.4rem; } }

@@ -60,6 +60,7 @@ $( function() {
       $('.active').removeClass('active');
       var target = $(e.target);
       target.addClass('active');
+      $('.images').removeClass('images--active');
       target.parent().addClass('images--active');
       centerCurrentImage(target);
       expandList(target);
