@@ -98,8 +98,6 @@ html {
       visibility: hidden;
       top: 5.1rem;
       right: 0rem;
-      height: 200vh;
-      background: #ffffff;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -145,7 +143,7 @@ html {
 
 .c-section--about, .c-section--hymnal, .c-section--insights, .c-section--voxdotcom, .c-section--concert {
   margin-top: 15rem;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
   padding-top: 5rem;
   padding-bottom: 5rem; }
   .c-section--about .image-container, .c-section--hymnal .image-container, .c-section--insights .image-container, .c-section--voxdotcom .image-container, .c-section--concert .image-container {
