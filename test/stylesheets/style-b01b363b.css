@@ -93,18 +93,18 @@ html {
     padding-right: 1.5rem; }
   @media screen and (max-width: 996px) {
     .c-top_menu--nav {
+      transition: all .3s !important;
       position: absolute;
       visibility: hidden;
       top: 5.1rem;
       right: 0rem;
-      height: 105vh;
+      height: 200vh;
       background: #ffffff;
       display: flex;
       flex-direction: column;
-      align-items: flex-end; }
+      align-items: flex-end;
+      opacity: 0; }
       .c-top_menu--nav a, .c-top_menu--nav p {
-        transition: all .3s !important;
-        opacity: 0;
         padding: 1rem;
         margin: 1.5rem;
         color: #ffffff;
@@ -120,9 +120,8 @@ html {
         .c-top_menu--nav p:hover {
           color: #4f4f4f !important; }
       .c-top_menu--nav.active {
-        visibility: visible; }
-        .c-top_menu--nav.active a, .c-top_menu--nav.active p {
-          opacity: 1; } }
+        visibility: visible;
+        opacity: 1; } }
   .c-top_menu--nav a {
     cursor: pointer;
     margin-left: .25rem;
