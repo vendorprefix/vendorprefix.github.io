@@ -55,13 +55,11 @@ $( function() {
   // Images
 
   function setImageLogic() {
-    $('img').on('click', function(e) {
+    $('.images img').on('click', function(e) {
       // Update active class on image click
-      $('.active').removeClass('active');
       var target = $(e.target);
+      target.siblings().removeClass('active');
       target.addClass('active');
-      $('.images').removeClass('images--active');
-      target.parent().addClass('images--active');
       centerCurrentImage(target);
       expandList(target);
     });
@@ -70,26 +68,25 @@ $( function() {
     // A) ESC: Close all active
     // B) Forward Arrow: Move to next
     // C) Back Arrow: Move to previous
-    window.addEventListener('keydown', function(e) {
-      var active = $('.active');
-      if (e.keyCode === 27) {
-        active.removeClass('active');
-        $('.images--active').removeClass('images--active');
-      } else if (
-        (e.keyCode === 37 && active.prev().length > 0) ||
-        (e.keyCode === 39 && active.next().length > 0)
-      ) {
-        var target = e.keyCode === 37 ? active.prev() : active.next();
-        active.removeClass('active');
-        target.addClass('active');
-        centerCurrentImage(target);
+    // window.addEventListener('keydown', function(e) {
+    //   var active = $('.active');
+    //   if (e.keyCode === 27) {
+    //     active.removeClass('active');
+    //   } else if (
+    //     (e.keyCode === 37 && active.prev().length > 0) ||
+    //     (e.keyCode === 39 && active.next().length > 0)
+    //   ) {
+    //     var target = e.keyCode === 37 ? active.prev() : active.next();
+    //     active.removeClass('active');
+    //     target.addClass('active');
+    //     centerCurrentImage(target);
 
-        // If we're moving forward, expand the list to mock infinite scrolling
-        if (e.keyCode === 39) {
-          expandList(target);
-        }
-      }
-    });
+    //     // If we're moving forward, expand the list to mock infinite scrolling
+    //     if (e.keyCode === 39) {
+    //       expandList(target);
+    //     }
+    //   }
+    // });
   }
 
   // If nearing the end of the current image list, clone and expand to create
@@ -114,4 +111,8 @@ $( function() {
   }
 
   setImageLogic();
+
+  $('.c-top_menu--nav-button, .c-top_menu--nav a').click(function() {  //use a class, since your ID gets mangled
+    $('.c-top_menu--nav').toggleClass('active');      //add the class to the clicked element
+  });
 });

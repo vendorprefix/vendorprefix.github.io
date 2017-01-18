@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="61px" viewBox="0 0 82 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>nav</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0.5390625,5 L71.6132623,5" id="path-1"></path>
+        <path d="M0.5390625,31 L71.6132623,31" id="path-2"></path>
+        <path d="M0.5390625,56 L71.6132623,56" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="nav" transform="translate(5.000000, 0.000000)" stroke="#979797">
+            <g id="Path">
+                <use stroke-width="10" xlink:href="#path-1"></use>
+                <use stroke-width="1" xlink:href="#path-1"></use>
+                <use stroke-width="1" xlink:href="#path-1"></use>
+            </g>
+            <g id="Path-Copy">
+                <use stroke-width="10" xlink:href="#path-2"></use>
+                <use stroke-width="1" xlink:href="#path-2"></use>
+                <use stroke-width="1" xlink:href="#path-2"></use>
+            </g>
+            <g id="Path-Copy-2">
+                <use stroke-width="10" xlink:href="#path-3"></use>
+                <use stroke-width="1" xlink:href="#path-3"></use>
+                <use stroke-width="1" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

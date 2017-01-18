@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Karla";
+@import url("https://fonts.googleapis.com/css?family=Overpass");
 * {
   box-sizing: border-box; }
 
@@ -56,7 +56,7 @@ html {
 .c-body {
   display: flex;
   justify-content: center;
-  font-family: "Karla", sans-serif;
+  font-family: "Overpass", sans-serif;
   color: #949494;
   overflow-x: hidden; }
 
@@ -76,6 +76,11 @@ html {
   z-index: 999;
   font-size: 1.5rem;
   border-bottom: 1px solid #dfdfdf; }
+  .c-top_menu--nav-button {
+    max-width: 18px; }
+    @media screen and (min-width: 996px) {
+      .c-top_menu--nav-button {
+        display: none; } }
   @media screen and (min-width: 996px) {
     .c-top_menu--wrapper {
       width: 96rem;
@@ -86,16 +91,43 @@ html {
     height: 5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem; }
-    .c-top_menu--contents nav a {
-      cursor: pointer;
-      margin-left: .25rem;
-      transition: color 0.2s; }
-      .c-top_menu--contents nav a.nav--active {
+  @media screen and (max-width: 996px) {
+    .c-top_menu--nav {
+      position: absolute;
+      visibility: hidden;
+      top: 5.5rem;
+      right: .5rem;
+      width: 50vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
+      .c-top_menu--nav a {
+        transition: all .3s !important;
+        opacity: 0;
+        padding: 1rem;
+        margin: 1rem;
+        color: #ffffff;
+        background: #4f4f4f; }
+        .c-top_menu--nav a:hover {
+          color: #ffffff !important; }
+        .c-top_menu--nav a.nav--active {
+          color: #ffffff !important;
+          background: #69CDED; }
+      .c-top_menu--nav.active {
+        visibility: visible; }
+        .c-top_menu--nav.active a {
+          opacity: 1; } }
+  .c-top_menu--nav a {
+    cursor: pointer;
+    margin-left: .25rem;
+    transition: color 0.2s; }
+    .c-top_menu--nav a.nav--active {
+      color: #69CDED; }
+      .c-top_menu--nav a.nav--active:hover {
         color: #69CDED; }
-        .c-top_menu--contents nav a.nav--active:hover {
-          color: #69CDED; }
-      .c-top_menu--contents nav a:hover {
-        color: #E381EB; }
+    .c-top_menu--nav a:hover {
+      color: #E381EB; }
   .c-top_menu--name {
     margin-right: auto; }
     .c-top_menu--name strong {
@@ -109,11 +141,12 @@ html {
   padding-bottom: 5rem; }
   .c-section--about .image-container, .c-section--hymnal .image-container, .c-section--insights .image-container, .c-section--voxdotcom .image-container, .c-section--concert .image-container {
     overflow-x: scroll;
-    padding: 1.5rem;
+    padding: 1.5rem 0rem;
     background: #4f4f4f; }
     .c-section--about .image-container::-webkit-scrollbar, .c-section--hymnal .image-container::-webkit-scrollbar, .c-section--insights .image-container::-webkit-scrollbar, .c-section--voxdotcom .image-container::-webkit-scrollbar, .c-section--concert .image-container::-webkit-scrollbar {
       width: 0px;
       height: 0px;
+      padding: 1.5rem;
       background: transparent; }
   .c-section--about .images, .c-section--hymnal .images, .c-section--insights .images, .c-section--voxdotcom .images, .c-section--concert .images {
     padding-left: 1.5rem;
@@ -121,7 +154,8 @@ html {
     flex-direction: row;
     align-items: center;
     height: 30vh;
-    transition: height .3s; }
+    transition: height .3s;
+    transform-origin: center center; }
     @media screen and (min-width: 996px) {
       .c-section--about .images, .c-section--hymnal .images, .c-section--insights .images, .c-section--voxdotcom .images, .c-section--concert .images {
         height: 40vh;
