@@ -98,6 +98,8 @@ html {
       visibility: hidden;
       top: 5.1rem;
       right: 0rem;
+      height: 95vh;
+      background: #ffffff;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
