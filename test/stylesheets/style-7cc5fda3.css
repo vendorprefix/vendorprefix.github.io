@@ -43,20 +43,30 @@ html {
 
 @font-face {
   font-family: 'Sofia Pro';
-  src: url("../images/fonts/SofiaProBlack-e3a9b93f.eot");
-  src: url("../images/fonts/SofiaProBlack-e3a9b93f.eot?#iefix") format("embedded-opentype"), url("../images/fonts/SofiaProBlack-239e6baa.woff") format("woff"), url("../images/fonts/SofiaProBlack-f8cd882b.ttf") format("truetype");
+  src: url("../images/fonts/SofiaProBlack-239e6baa.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Sofia Pro';
-  src: url("../images/fonts/SofiaProBlack-Italic-99f51a82.eot");
-  src: url("../images/fonts/SofiaProBlack-Italic-99f51a82.eot?#iefix") format("embedded-opentype"), url("../images/fonts/SofiaProBlack-Italic-fb249696.woff") format("woff"), url("../images/fonts/SofiaProBlack-Italic-88ebd230.ttf") format("truetype");
+  src: url("../images/fonts/SofiaProBlack-Italic-fb249696.woff") format("woff");
   font-weight: normal;
   font-style: italic; }
+@font-face {
+  font-family: 'Apercu Mono';
+  src: url("../images/fonts/apercu_mono-e824cd17.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+a {
+  color: #69CDED;
+  transition: color 0.2s; }
+  a:hover {
+    color: #E381EB; }
+
 .c-body {
   display: flex;
   justify-content: center;
-  font-family: "Overpass", sans-serif;
+  flex-direction: column;
+  font-family: "Apercu Mono", monospace;
   color: #949494;
   overflow-x: hidden; }
 
@@ -66,6 +76,9 @@ html {
   justify-content: center;
   font-size: 1.6rem;
   width: 100vw; }
+  @media screen and (min-width: 996px) {
+    .c-content {
+      font-size: 1.8rem; } }
 
 .c-top_menu {
   position: fixed;
@@ -125,10 +138,8 @@ html {
   .c-top_menu--nav a {
     cursor: pointer;
     margin-left: .25rem;
+    color: #949494;
     transition: color 0.2s; }
-    @media screen and (min-width: 996px) {
-      .c-top_menu--nav a:nth-child(1) {
-        margin-right: 3rem; } }
     .c-top_menu--nav a.nav--active {
       color: #69CDED; }
       .c-top_menu--nav a.nav--active:hover {
@@ -138,7 +149,8 @@ html {
   .c-top_menu--nav p {
     display: inline-block; }
   .c-top_menu--name {
-    margin-right: auto; }
+    margin-right: auto;
+    font-size: 1.8rem; }
     .c-top_menu--name strong {
       font-family: "Sofia Pro", sans-serif;
       color: #4f4f4f; }
@@ -151,7 +163,10 @@ html {
   .c-section--about .image-container, .c-section--hymnal .image-container, .c-section--insights .image-container, .c-section--voxdotcom .image-container, .c-section--concert .image-container {
     overflow-x: scroll;
     padding: 1.5rem 0rem;
-    background: #4f4f4f; }
+    margin-bottom: 1rem; }
+    @media screen and (min-width: 996px) {
+      .c-section--about .image-container, .c-section--hymnal .image-container, .c-section--insights .image-container, .c-section--voxdotcom .image-container, .c-section--concert .image-container {
+        margin-bottom: 2rem; } }
     .c-section--about .image-container::-webkit-scrollbar, .c-section--hymnal .image-container::-webkit-scrollbar, .c-section--insights .image-container::-webkit-scrollbar, .c-section--voxdotcom .image-container::-webkit-scrollbar, .c-section--concert .image-container::-webkit-scrollbar {
       width: 0px;
       height: 0px;
@@ -165,25 +180,30 @@ html {
     height: 30vh;
     transition: height .3s;
     transform-origin: center center; }
+    .c-section--about .images.images--active, .c-section--hymnal .images.images--active, .c-section--insights .images.images--active, .c-section--voxdotcom .images.images--active, .c-section--concert .images.images--active {
+      height: 33vh; }
     @media screen and (min-width: 996px) {
       .c-section--about .images, .c-section--hymnal .images, .c-section--insights .images, .c-section--voxdotcom .images, .c-section--concert .images {
-        height: 40vh;
+        height: 50vh;
         padding-left: calc((100% - 930px)/2); }
         .c-section--about .images.images--active, .c-section--hymnal .images.images--active, .c-section--insights .images.images--active, .c-section--voxdotcom .images.images--active, .c-section--concert .images.images--active {
-          height: 60vh; } }
+          height: 70vh; } }
     .c-section--about .images:hover, .c-section--hymnal .images:hover, .c-section--insights .images:hover, .c-section--voxdotcom .images:hover, .c-section--concert .images:hover {
       cursor: pointer; }
     .c-section--about .images img, .c-section--hymnal .images img, .c-section--insights .images img, .c-section--voxdotcom .images img, .c-section--concert .images img {
       height: 30vh;
       margin-right: 1rem;
       transition: height .3s;
-      transform-origin: center center; }
+      transform-origin: center center;
+      box-shadow: 0px 0px 15px #c2c2c2; }
+      .c-section--about .images img.active, .c-section--hymnal .images img.active, .c-section--insights .images img.active, .c-section--voxdotcom .images img.active, .c-section--concert .images img.active {
+        height: 33vh; }
       @media screen and (min-width: 996px) {
         .c-section--about .images img, .c-section--hymnal .images img, .c-section--insights .images img, .c-section--voxdotcom .images img, .c-section--concert .images img {
-          height: 40vh;
+          height: 50vh;
           transition-delay: 0s; }
           .c-section--about .images img.active, .c-section--hymnal .images img.active, .c-section--insights .images img.active, .c-section--voxdotcom .images img.active, .c-section--concert .images img.active {
-            height: 60vh; } }
+            height: 70vh; } }
   .c-section--about .project, .c-section--hymnal .project, .c-section--insights .project, .c-section--voxdotcom .project, .c-section--concert .project {
     padding-left: 1.5rem;
     padding-right: 1.5rem; }
@@ -195,12 +215,12 @@ html {
     font-family: "Sofia Pro", sans-serif;
     color: #4f4f4f;
     font-size: 7rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     line-height: 6rem; }
     @media screen and (min-width: 996px) {
       .c-section--about .heading, .c-section--hymnal .heading, .c-section--insights .heading, .c-section--voxdotcom .heading, .c-section--concert .heading {
         font-size: 12rem;
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
         line-height: 10rem; } }
   .c-section--about .tags, .c-section--hymnal .tags, .c-section--insights .tags, .c-section--voxdotcom .tags, .c-section--concert .tags {
     margin-bottom: 1.8rem; }
@@ -209,10 +229,8 @@ html {
       background: #949494;
       color: #ffffff;
       font-size: 1.2rem;
-      padding: .75rem 1rem;
-      transform: skew(-10deg); }
+      padding: .75rem 1rem; }
       .c-section--about .tags li p, .c-section--hymnal .tags li p, .c-section--insights .tags li p, .c-section--voxdotcom .tags li p, .c-section--concert .tags li p {
-        transform: skew(10deg);
         margin-bottom: 0;
         line-height: 1.75rem; }
       @media screen and (min-width: 996px) {
@@ -223,12 +241,18 @@ html {
     margin-bottom: 1.8rem; }
     @media screen and (min-width: 996px) {
       .c-section--about p, .c-section--hymnal p, .c-section--insights p, .c-section--voxdotcom p, .c-section--concert p {
-        max-width: 50rem; } }
-  .c-section--about a, .c-section--hymnal a, .c-section--insights a, .c-section--voxdotcom a, .c-section--concert a {
-    color: #69CDED;
-    transition: color 0.2s; }
-    .c-section--about a:hover, .c-section--hymnal a:hover, .c-section--insights a:hover, .c-section--voxdotcom a:hover, .c-section--concert a:hover {
-      color: #E381EB; }
+        max-width: 75rem; } }
+
+.c-footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem; }
+  .c-footer--content {
+    display: flex;
+    justify-content: space-around;
+    height: 5rem;
+    width: 60vw;
+    max-width: 300px; }
 
 .shape1-transform {
   transform: translate(0px, -140px); }
