@@ -138,8 +138,11 @@ a {
   .c-top_menu--nav a {
     cursor: pointer;
     margin-left: .25rem;
-    color: #949494;
+    color: #ffffff;
     transition: color 0.2s; }
+    @media screen and (min-width: 996px) {
+      .c-top_menu--nav a {
+        color: #949494; } }
     .c-top_menu--nav a.nav--active {
       color: #69CDED; }
       .c-top_menu--nav a.nav--active:hover {
@@ -223,13 +226,14 @@ a {
         margin-bottom: 5rem;
         line-height: 10rem; } }
   .c-section--about .tags, .c-section--hymnal .tags, .c-section--insights .tags, .c-section--voxdotcom .tags, .c-section--concert .tags {
-    margin-bottom: 1.8rem; }
+    margin-bottom: .9rem; }
     .c-section--about .tags li, .c-section--hymnal .tags li, .c-section--insights .tags li, .c-section--voxdotcom .tags li, .c-section--concert .tags li {
       display: inline-block;
       background: #949494;
       color: #ffffff;
       font-size: 1.2rem;
-      padding: .75rem 1rem; }
+      padding: .75rem 1rem;
+      margin-bottom: .9rem; }
       .c-section--about .tags li p, .c-section--hymnal .tags li p, .c-section--insights .tags li p, .c-section--voxdotcom .tags li p, .c-section--concert .tags li p {
         margin-bottom: 0;
         line-height: 1.75rem; }
@@ -251,7 +255,7 @@ a {
     display: flex;
     justify-content: space-around;
     height: 5rem;
-    width: 60vw;
+    width: 70vw;
     max-width: 300px; }
 
 .shape1-transform {
