@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Overpass");
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  -webkit-margin-after: 0em;
+  -webkit-margin-before: 0em;
+  -webkit-margin-end: 0px;
+  -webkit-margin-start: 0px;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 62.5%; }
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url("../images/fonts/SofiaProBlack-239e6baa.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url("../images/fonts/SofiaProBlack-Italic-fb249696.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: 'Apercu Mono';
+  src: url("../images/fonts/apercu_mono-e824cd17.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+a {
+  color: #69CDED;
+  transition: color 0.2s; }
+  a:hover {
+    color: #E381EB; }
+
+.c-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Apercu Mono", monospace;
+  color: #949494;
+  overflow-x: hidden; }
+
+.c-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.6rem;
+  width: 100vw; }
+  @media screen and (min-width: 996px) {
+    .c-content {
+      font-size: 1.8rem; } }
+
+.c-top_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  width: 100vw;
+  z-index: 999;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #dfdfdf; }
+  .c-top_menu--nav-button {
+    max-width: 18px; }
+    @media screen and (min-width: 996px) {
+      .c-top_menu--nav-button {
+        display: none; } }
+  @media screen and (min-width: 996px) {
+    .c-top_menu--wrapper {
+      width: 96rem;
+      margin: 0 auto; } }
+  .c-top_menu--contents {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+  @media screen and (max-width: 996px) {
+    .c-top_menu--nav {
+      transition: all .3s !important;
+      position: absolute;
+      visibility: hidden;
+      top: 5.1rem;
+      right: 0rem;
+      height: 95vh;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      opacity: 0; }
+      .c-top_menu--nav a, .c-top_menu--nav p {
+        padding: 1rem;
+        margin: 1.5rem;
+        color: #ffffff;
+        background: #4f4f4f; }
+        .c-top_menu--nav a:hover, .c-top_menu--nav p:hover {
+          color: #ffffff !important; }
+        .c-top_menu--nav a.nav--active, .c-top_menu--nav p.nav--active {
+          color: #ffffff !important;
+          background: #69CDED; }
+      .c-top_menu--nav p {
+        background: #ffffff;
+        color: #4f4f4f; }
+        .c-top_menu--nav p:hover {
+          color: #4f4f4f !important; }
+      .c-top_menu--nav.active {
+        visibility: visible;
+        opacity: 1; } }
+  .c-top_menu--nav a {
+    cursor: pointer;
+    margin-left: .25rem;
+    color: #ffffff;
+    transition: color 0.2s; }
+    @media screen and (min-width: 996px) {
+      .c-top_menu--nav a {
+        color: #949494; } }
+    .c-top_menu--nav a.nav--active {
+      color: #69CDED; }
+      .c-top_menu--nav a.nav--active:hover {
+        color: #69CDED; }
+    .c-top_menu--nav a:hover {
+      color: #E381EB; }
+  .c-top_menu--nav p {
+    display: inline-block; }
+  .c-top_menu--name {
+    margin-right: auto;
+    font-size: 1.8rem; }
+    .c-top_menu--name strong {
+      font-family: "Sofia Pro", sans-serif;
+      color: #4f4f4f; }
+
+.c-section--about, .c-section--hymnal, .c-section--insights, .c-section--voxdotcom, .c-section--concert {
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+  .c-section--about .image-container, .c-section--hymnal .image-container, .c-section--insights .image-container, .c-section--voxdotcom .image-container, .c-section--concert .image-container {
+    overflow-x: scroll;
+    padding: 1.5rem 0rem;
+    margin-bottom: 1rem; }
+    @media screen and (min-width: 996px) {
+      .c-section--about .image-container, .c-section--hymnal .image-container, .c-section--insights .image-container, .c-section--voxdotcom .image-container, .c-section--concert .image-container {
+        margin-bottom: 2rem; } }
+    .c-section--about .image-container::-webkit-scrollbar, .c-section--hymnal .image-container::-webkit-scrollbar, .c-section--insights .image-container::-webkit-scrollbar, .c-section--voxdotcom .image-container::-webkit-scrollbar, .c-section--concert .image-container::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+      padding: 1.5rem;
+      background: transparent; }
+  .c-section--about .images, .c-section--hymnal .images, .c-section--insights .images, .c-section--voxdotcom .images, .c-section--concert .images {
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30vh;
+    transition: height .3s;
+    transform-origin: center center; }
+    .c-section--about .images.images--active, .c-section--hymnal .images.images--active, .c-section--insights .images.images--active, .c-section--voxdotcom .images.images--active, .c-section--concert .images.images--active {
+      height: 33vh; }
+    @media screen and (min-width: 996px) {
+      .c-section--about .images, .c-section--hymnal .images, .c-section--insights .images, .c-section--voxdotcom .images, .c-section--concert .images {
+        height: 50vh;
+        padding-left: calc((100% - 930px)/2); }
+        .c-section--about .images.images--active, .c-section--hymnal .images.images--active, .c-section--insights .images.images--active, .c-section--voxdotcom .images.images--active, .c-section--concert .images.images--active {
+          height: 70vh; } }
+    .c-section--about .images:hover, .c-section--hymnal .images:hover, .c-section--insights .images:hover, .c-section--voxdotcom .images:hover, .c-section--concert .images:hover {
+      cursor: pointer; }
+    .c-section--about .images img, .c-section--hymnal .images img, .c-section--insights .images img, .c-section--voxdotcom .images img, .c-section--concert .images img {
+      height: 30vh;
+      margin-right: 1rem;
+      transition: height .3s;
+      transform-origin: center center;
+      box-shadow: 0px 0px 15px #c2c2c2; }
+      .c-section--about .images img.active, .c-section--hymnal .images img.active, .c-section--insights .images img.active, .c-section--voxdotcom .images img.active, .c-section--concert .images img.active {
+        height: 33vh; }
+      @media screen and (min-width: 996px) {
+        .c-section--about .images img, .c-section--hymnal .images img, .c-section--insights .images img, .c-section--voxdotcom .images img, .c-section--concert .images img {
+          height: 50vh;
+          transition-delay: 0s; }
+          .c-section--about .images img.active, .c-section--hymnal .images img.active, .c-section--insights .images img.active, .c-section--voxdotcom .images img.active, .c-section--concert .images img.active {
+            height: 70vh; } }
+  .c-section--about .project, .c-section--hymnal .project, .c-section--insights .project, .c-section--voxdotcom .project, .c-section--concert .project {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+    @media screen and (min-width: 996px) {
+      .c-section--about .project, .c-section--hymnal .project, .c-section--insights .project, .c-section--voxdotcom .project, .c-section--concert .project {
+        width: 96rem;
+        margin: 0 auto; } }
+  .c-section--about .heading, .c-section--hymnal .heading, .c-section--insights .heading, .c-section--voxdotcom .heading, .c-section--concert .heading {
+    font-family: "Sofia Pro", sans-serif;
+    color: #4f4f4f;
+    font-size: 7rem;
+    margin-bottom: 3rem;
+    line-height: 6rem; }
+    @media screen and (min-width: 996px) {
+      .c-section--about .heading, .c-section--hymnal .heading, .c-section--insights .heading, .c-section--voxdotcom .heading, .c-section--concert .heading {
+        font-size: 12rem;
+        margin-bottom: 5rem;
+        line-height: 10rem; } }
+  .c-section--about .tags, .c-section--hymnal .tags, .c-section--insights .tags, .c-section--voxdotcom .tags, .c-section--concert .tags {
+    margin-bottom: .9rem; }
+    .c-section--about .tags li, .c-section--hymnal .tags li, .c-section--insights .tags li, .c-section--voxdotcom .tags li, .c-section--concert .tags li {
+      display: inline-block;
+      background: #949494;
+      color: #ffffff;
+      font-size: 1.2rem;
+      padding: .75rem 1rem;
+      margin-bottom: .9rem; }
+      .c-section--about .tags li p, .c-section--hymnal .tags li p, .c-section--insights .tags li p, .c-section--voxdotcom .tags li p, .c-section--concert .tags li p {
+        margin-bottom: 0;
+        line-height: 1.75rem; }
+      @media screen and (min-width: 996px) {
+        .c-section--about .tags li, .c-section--hymnal .tags li, .c-section--insights .tags li, .c-section--voxdotcom .tags li, .c-section--concert .tags li {
+          font-size: 1.4rem; } }
+  .c-section--about p, .c-section--hymnal p, .c-section--insights p, .c-section--voxdotcom p, .c-section--concert p {
+    line-height: 2.8rem;
+    margin-bottom: 1.8rem; }
+    @media screen and (min-width: 996px) {
+      .c-section--about p, .c-section--hymnal p, .c-section--insights p, .c-section--voxdotcom p, .c-section--concert p {
+        max-width: 75rem; } }
+
+.c-footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem; }
+  .c-footer--content {
+    display: flex;
+    justify-content: space-around;
+    height: 5rem;
+    width: 70vw;
+    max-width: 300px; }
+
+.shape1-transform {
+  transform: translate(0px, -140px); }
